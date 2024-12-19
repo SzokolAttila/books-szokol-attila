@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string("publisher", 50);
             $table->string("language", 50);
             $table->integer("pages");
+            $table->text("description");
             $table->timestamps();
             $table->softDeletes();
         });

@@ -17,11 +17,11 @@ return new class extends Migration
             $table->string("title", 80);
             $table->string("author", 50);
             $table->string("genre", 20);
-            $table->integer("published");
+            $table->integer("published")->nullable()->default(null);
             $table->string("publisher", 50);
             $table->string("language", 50);
             $table->integer("pages");
-            $table->text("description");
+            $table->text("description")->nullable()->default(null);
             $table->timestamps();
             $table->softDeletes();
         });

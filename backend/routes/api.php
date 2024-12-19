@@ -9,3 +9,4 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get("/books", [BookController::class, "index"])->name("books.index");
+Route::post("/books", [BookController::class, "store"])->name("books.store");

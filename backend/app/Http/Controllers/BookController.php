@@ -8,6 +8,7 @@ use App\Http\Resources\BookResource;
 use App\Models\Book;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Http\Response;
 
 class BookController extends Controller
 {
@@ -53,8 +54,10 @@ class BookController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(int $id)
+    public function destroy(int $id) : Response
     {
-        //
+        if (Book::findOrFail($id)->destroy($id))
+            return response()->noContent();
+        return response(status:500);
     }
 }

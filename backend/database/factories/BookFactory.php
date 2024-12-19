@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Book;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,9 +20,9 @@ class BookFactory extends Factory
         return [
             "isbn" => fake()->isbn13(),
             "language" => fake()->languageCode(),
-            "genre" => fake()->randomElement(["fantasy", "romance", "thriller", "adventure", "crime", "drama", "dystopian"]),
+            "genre" => fake()->randomElement(Book::$genres),
             "pages" => fake()->numberBetween(180, 1200),
-            "description" => fake()->text(500),
+            "description" => fake()->text(),
             "title" => fake()->sentence(fake()->numberBetween(2, 6)),
             "published" => fake()->year(),
             "publisher" => fake()->words(fake()->numberBetween(3, 5), true),

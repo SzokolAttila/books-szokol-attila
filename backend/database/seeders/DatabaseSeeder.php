@@ -15,6 +15,6 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(BookSeeder::class);
-        Book::factory()->count(15)->make();
+        Book::factory()->count(15)->create();
     }
 }

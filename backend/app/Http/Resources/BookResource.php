@@ -17,14 +17,14 @@ class BookResource extends JsonResource
         return [
             "id" => $this->id,
             "isbn" => $this->isbn,
-            "language" => $this->language,
-            "genre" => $this->genre,
-            "pages" => $this->pages,
-            "description" => $this->description,
             "title" => $this->title,
+            "author" => $this->author,
+            "genre" => $this->genre,
             "published" => $this->published,
             "publisher" => $this->publisher,
-            "author" => $this->author,
+            "pages" => $this->pages,
+            "language" => $this->language,
+            "description" => $this->description,
         ];
     }
 }

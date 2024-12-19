@@ -9,7 +9,7 @@ class Book extends Model
 {
     public static $genres = ["fantasy", "romance", "thriller", "adventure", "crime", "drama", "dystopian"];
     protected $fillable = [
-        "isbn", "title", "author", "genre", "published", "language", "pages", "publisher"  
+        "isbn", "title", "author", "genre", "published", "language", "pages", "publisher", "description"  
     ];
     use HasFactory;
 }
